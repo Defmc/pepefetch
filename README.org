@@ -1,8 +1,8 @@
 * Make sure you have these variables declared in your environment:
-	** USER
-	** DESKTOP_SESSION
-	** TERM
-	** EDITOR
-	** PWD
+	- USER
+	- DESKTOP_SESSION
+	- TERM
+	- EDITOR
+	- PWD
 * Run ~cargo r --release~ or download the release.
 [[file:pepe.png]]
