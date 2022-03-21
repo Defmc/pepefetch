@@ -2,7 +2,7 @@
 name = "pepefetch"
 version = "3.0.0"
 edition = "2021"
-license-file = "README.org"
+license-file = "README.md"
 description = "The pepe frog linux fetch."
 repository = "https://github.com/sigmw/pepefetch"
 

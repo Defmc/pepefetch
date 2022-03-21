@@ -1,9 +1,0 @@
-* Make sure you have these variables declared in your environment:
-	- USER
-	- DESKTOP_SESSION
-	- TERM
-	- EDITOR
-	- PWD
-	- *Is good to check if you have the /etc/hostname file.*
-* Run ~cargo r --release~ or download the release.
-[[file:pepe.png]]
