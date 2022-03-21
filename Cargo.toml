@@ -2,6 +2,9 @@
 name = "pepefetch"
 version = "3.0.0"
 edition = "2021"
+license-file = "README.org"
+description = "The pepe frog linux fetch."
+repository = "https://github.com/sigmw/pepefetch"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
