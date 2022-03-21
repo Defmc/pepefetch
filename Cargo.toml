@@ -8,3 +8,4 @@ edition = "2021"
 [dependencies]
 systemstat = "0.1.10"
 ansi_term = "0.12.1"
+local_ipaddress = "0.1.3"
