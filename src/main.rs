@@ -67,7 +67,7 @@ fn main() {
 
     ascii_img[1].push_str(&format_login(hi, &get_env_var("USER"), &hostname()));
     let infos = vec![
-        format_env(hi, "DE", get_env_var("DE")),
+        format_env(hi, "DE", get_env_var("DESKTOP_SESSION")),
         format_env(hi, "Term", get_env_var("TERM")),
         format_env(hi, "Local Ipv4", ip),
         format_env(hi, "Uptime", format!("{up_hours} hours, {up_minutes} mins")),
