@@ -5,4 +5,6 @@
 
 ## This program work just in Linux.
 
+`pepefetch --hide` Hide info contents
+
 ![pepe](pepe.png)
