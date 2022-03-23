@@ -52,7 +52,7 @@ fn main() {
     let ip = local_ipaddress::get().unwrap_or_else(|| "Not connected".to_owned());
 
     let (up_hours, up_minutes): (u64, u64) = match sys.uptime() {
-        Ok(uptime) => (uptime.as_secs() / 3600, uptime.as_secs() / 60),
+        Ok(uptime) => (uptime.as_secs() / 3600, uptime.as_secs() % 3600 / 60),
         Err(_) => (0, 0),
     };
     let get_env_var = |var: &str| {
