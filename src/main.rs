@@ -25,7 +25,7 @@ fn kernel() -> String {
 
 fn format_env(hide_infos: bool, msg: &str, info: String) -> String {
     if hide_infos { return String::new() }
-    format!(" {}: {info}", Red.bold().paint(msg))
+    format!(" {}: {info}", Red.bold().paint(msg), info=info)
 }
 
 fn format_login(hide_infos: bool, usr: &str, host: &str) -> String {
@@ -57,7 +57,7 @@ fn main() {
         Err(_) => (0, 0),
     };
     let get_env_var = |var: &str| env::var(var)
-        .unwrap_or_else(|_| format!("Variable {var} not defined"));
+        .unwrap_or_else(|_| format!("Variable {var} not defined", var=var));
 
     let mut ascii_img: Vec<String> = include!("../assets/ascii").split('\n')
         .map(|s| s.to_owned())
@@ -70,9 +70,9 @@ fn main() {
         format_env(hi, "DE", get_env_var("DESKTOP_SESSION")),
         format_env(hi, "Term", get_env_var("TERM")),
         format_env(hi, "Local Ipv4", ip),
-        format_env(hi, "Uptime", format!("{up_hours} hours, {up_minutes} mins")),
+        format_env(hi, "Uptime", format!("{up_hours} hours, {up_minutes} mins", up_hours=up_hours, up_minutes=up_minutes)),
         format_env(hi, "Kernel", kernel()),
-        format_env(hi, "Memory", format!("{used}MiB / {total}MiB")),
+        format_env(hi, "Memory", format!("{used}MiB / {total}MiB", used=used, total=total)),
     ];
 
     ascii_img.iter_mut()
@@ -81,5 +81,5 @@ fn main() {
         .for_each(|(line, info)| line.push_str(&info));
 
     ascii_img.iter()
-        .for_each(|line| println!("{line}"));
+        .for_each(|line| println!("{line}", line=line));
 }
