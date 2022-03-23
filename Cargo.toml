@@ -5,6 +5,9 @@ edition = "2021"
 license-file = "README.md"
 description = "The pepe frog linux fetch."
 repository = "https://github.com/sigmw/pepefetch"
+include = [
+  "assets/ascii"
+]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
