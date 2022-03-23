@@ -10,7 +10,7 @@ include = [
 ]
 
 [[bin]]
-bench = false,
+bench = false
 path = "src/main.rs"
 name = "pepefetch"
 
